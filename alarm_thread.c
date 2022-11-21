@@ -50,8 +50,7 @@ int main (int argc, char *argv[])
             fprintf (stderr, "Bad command\n");
             free (alarm);
         } else {
-            status = pthread_create (
-                &thread, NULL, alarm_thread, alarm);
+            status = pthread_create (&thread, NULL, alarm_thread, alarm);
             if (status != 0)
                 err_abort (status, "Create alarm thread");
         }
