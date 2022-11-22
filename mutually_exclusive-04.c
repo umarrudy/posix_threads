@@ -45,9 +45,7 @@ int main(void)
 
   while (i < 2)
   {
-    error = pthread_create(&(tid[i]),
-                           NULL,
-                           &trythis, NULL);
+    error = pthread_create(&(tid[i]), NULL, &trythis, NULL);
     if (error != 0)
       printf("\nThread can't be created :[%s]",
              strerror(error));
